@@ -1,0 +1,657 @@
+<body>
+  <div class="page-bg">
+    <div class="container">
+      
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RobotMotion Dataset</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+  <div class="hero-content">
+    <h1>RobotMotion</h1>
+    <p class="subtitle">A large-scale human behavior dataset for training physical AI and humanoid robots.</p>
+
+    <div class="links">
+  <a
+    target="_blank"
+    class="button"
+  >
+    Paper
+    (Coming soon)
+  </a>
+
+  <a
+    href="https://drive.google.com/file/d/1SGuQxCZZ-zgUALXhXhfcWfVtf8GkS6of/view?usp=sharing"
+    target="_blank"
+    class="button"
+  >
+    Dataset
+  </a>
+  <a
+    href="https://drive.google.com/file/d/1nThpJsG2QF7CbkWY1zUlkWKuPV2PG3_5/view?usp=sharing"
+    target="_blank"
+    class="button"
+  >
+    Timeline
+  </a>
+  <a
+    href="https://drive.google.com/file/d/12MPpdxoN9DIZZ_JtEwjZCzHr8MA-btSi/view?usp=sharing"
+    target="_blank"
+    class="button"
+  >
+    Roadmap
+  </a>
+</div>
+  </div>
+</section>
+
+    <!-- ABOUT -->
+    <section class="minititle">
+  <h2>Abstract</h2>
+  <p class="section-description">
+    RobotMotion is a large-scale dataset of real-world human behavior designed to
+    support research in robot learning and physical AI. The dataset captures
+    egocentric human demonstrations across diverse tasks, environments, and
+    object configurations, with a focus on long-horizon, multi-step activities.
+    RobotMotion aims to bridge the gap between human behavior data and embodied
+    robotic systems.
+  </p>
+</section>
+
+    <!-- Project objectives -->
+    <section id="objectives">
+  <h2>Project Objectives</h2>
+  <p>
+    RobotMotion aims to build a large-scale, high-quality, multi-modal humanoid dataset and
+    an associated AI development pipeline to accelerate research and real-world deployment
+    of humanoid robots across perception, reasoning, and action. The project focuses on
+    enabling learning for vision-language-action models, manipulation, locomotion, and
+    embodied decision-making in diverse real-world environments.
+  </p>
+</section>
+
+
+        <!-- Project status -->
+    <section class="status">
+  <h2>Project Status</h2>
+
+  <p class="section-description">
+    RobotMotion is an ongoing dataset and system development effort.
+    The metrics below reflect the current internal progress and will
+    be updated as the project evolves.
+  </p>
+
+  <div class="status-grid">
+    <div class="status-item">
+      <span class="status-value">12</span>
+      <span class="status-label">Skills defined</span>
+    </div>
+
+    <div class="status-item">
+      <span class="status-value">24000</span>
+      <span class="status-label">Recorded episodes</span>
+    </div>
+
+    <div class="status-item">
+      <span class="status-value">~170 hrs</span>
+      <span class="status-label">Multi-modal data</span>
+    </div>
+
+    <div class="status-item">
+      <span class="status-value">3</span>
+      <span class="status-label">Data sources</span>
+    </div>
+
+    <div class="status-item">
+      <span class="status-value">RGB / RGB-D</span>
+      <span class="status-label">Vision modalities</span>
+    </div>
+
+    <div class="status-item">
+      <span class="status-value">Human / Sim / TeleOp</span>
+      <span class="status-label">Collection modes</span>
+    </div>
+  </div>
+</section>
+
+<!-- Dataset overview -->
+    <section>
+      <section>
+  <h2>Dataset Examples </h2>
+
+  <section class="paired-demo">
+
+  <p class="task-title">
+    <em>Trained robot hands doing multiple task.</em>
+  </p>
+
+  <div class="paired-videos">
+
+    <!-- Left video -->
+    <div class="demo-video">
+      <video autoplay loop muted playsinline>
+        <source src="assets/videos/Imr Cobot.mp4" type="video/mp4">
+      </video>
+      <p class="demo-caption">Pick and place an object</p>
+    </div>
+
+    <!-- Right video (new one) -->
+    <div class="demo-video">
+      <video autoplay loop muted playsinline>
+        <source src="assets/videos/Vulcan X Vinrobotics Mp4.mp4" type="video/mp4">
+      </video>
+      <p class="demo-caption">And multiple other tasks</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+  
+</section>
+
+
+</section>
+
+    
+  <section>
+  <h2>Dataset Overview</h2>
+
+  <p>
+    RobotMotion is a large-scale dataset of real-world human behavior designed
+    for research in robot learning and physical AI. The dataset captures
+    egocentric demonstrations of task-oriented activities performed in
+    everyday environments, with an emphasis on long-horizon, multi-step actions.
+  </p>
+
+  <ul class="dataset-spec">
+    <li>
+      <strong>Modalities:</strong>
+      RGB video, optional audio, task-level metadata
+    </li>
+    <li>
+      <strong>Viewpoint:</strong>
+      Egocentric (first-person), aligned with human perception
+    </li>
+    <li>
+      <strong>Environments:</strong>
+      Indoor and real-world daily settings with diverse object configurations
+    </li>
+    <li>
+      <strong>Temporal Structure:</strong>
+      Continuous sequences capturing full task execution
+    </li>
+    <li>
+      <strong>Granularity:</strong>
+      Long-horizon action sequences rather than isolated primitives
+    </li>
+  </ul>
+
+    <img
+    src="assets/image/RM AI Infrastructure.PNG"
+    alt="Overview of RobotMotion dataset structure"
+    class="overview-diagram"
+  />
+    <p class="diagram-caption">
+    Overview of the RobotMotion data pipeline, illustrating the flow
+    between Human videos, Simulation Data, and TeleOps.
+  </p>
+</section>
+
+    <!-- Data Sources -->
+    <section id="data-sources">
+  <h2>Data Sources</h2>
+  <ul>
+    <li><strong>Human Data:</strong> Egocentric and third-person human demonstrations collected in natural, unconstrained environments.</li>
+    <li><strong>Simulation Data:</strong> Large-scale data generated in physics-based simulators with rich state information and ground-truth annotations.</li>
+    <li><strong>Teleoperation Data:</strong> Real humanoid robot executions captured via human-in-the-loop control.</li>
+  </ul>
+</section>
+    
+<!-- Dataset Structure & Modalities -->
+<section id="dataset-structure" class="section">
+  <div class="container">
+  <h2>Dataset Structure & Modalities</h2>
+  <p class="section-subtitle">
+    RobotMotion organizes heterogeneous data sources under a unified skill–episode abstraction,
+    enabling consistent access across human demonstrations, simulation, and teleoperation.
+  </p>
+
+  <div class="dataset-grid">
+
+    <!-- Human Data -->
+    <div class="dataset-column">
+      <h3>Human Demonstrations</h3>
+      <ul>
+        <li>Egocentric RGB / RGB-D video</li>
+        <li>Audio and task execution context</li>
+        <li>Natural, unconstrained environments</li>
+        <li>Optional visual annotations (segmentation, boxes, tracking)</li>
+      </ul>
+
+      <p class="caption">
+        Human data is organized by skill, each containing multiple video episodes
+        with standardized metadata.
+      </p>
+
+      <pre class="code-snippet">
+{
+  "skill_id": 1,
+  "skill_name": "pick_up_cup",
+  "skill_description": "Pick up a cup from a table or flat surface using one hand",
+  "total_episodes": 2750,
+  "episodes": [
+    {
+      "episode_id": 1,
+      "video_type": "RGB",
+      "video_dimension": "1280x720",
+      "video_fps": 30,
+      "video_depth": false,
+      "frame_count": 298,
+      "video_path": "videos/pick_up_cup/1.mp4",
+      "annotation": "No"
+    },
+    {
+      "episode_id": 2,
+      "video_type": "RGBD",
+      "video_dimension": "640x480",
+      "video_fps": 30,
+      "video_depth": true,
+      "frame_count": 315,
+      "video_path": "videos/pick_up_cup/2.mp4",
+      "annotation": {
+        "pixel_level_segmentation": true,
+        "bounding_box": true,
+        "tracking_trajectory": true,
+        "annotation_path": "annotations/pick_up_cup/2.json"
+      }
+    }
+  ]
+}
+
+      </pre>
+    </div>
+
+    <!-- Simulation Data -->
+    <div class="dataset-column">
+      <h3>Simulation Data</h3>
+      <ul>
+        <li>Large-scale skill generation in NVIDIA Isaac Sim</li>
+        <li>Perfect ground-truth annotations</li>
+        <li>Domain randomization (lighting, objects, dynamics)</li>
+        <li>Language-conditioned task descriptions</li>
+      </ul>
+
+      <p class="caption">
+        Simulation episodes provide synchronized state, action, and multi-sensor observations
+        with frame-level alignment.
+      </p>
+
+      <pre class="code-snippet">
+{
+  "skill_id": 1,
+  "skill_name": "pick_up_cup",
+  "skill_description": "Grasp and lift randomized cups from tables in diverse simulated environments.",
+  "total_episodes": 10000,
+  "sim_config": {
+    "simulator": "isaac_sim",
+    "robot_uid": "unitree_g1_sim_2025",
+    "robot_type": "unitree_g1",
+    "dof_summary": {
+      "arms": 14,
+      "legs": 15,
+      "hands": 14,
+      "total": 43
+    },
+    "core_sensors": [
+      "RGB cameras",
+      "proprioception (joint states, IMU, odometry)"
+    ],
+    "optional_sensors": [
+      "depth camera",
+      "LiDAR",
+      "tactile sensors"
+    ],
+    "control_hz": 100,
+    "default_camera_hz": 30,
+    "default_lidar_hz": 10,
+    "default_tactile_hz": 100,
+    "domain_randomization": true,
+    "sync_note": "All modalities synchronized via frame index and timestamps."
+  },
+  "episodes": [
+    {
+      "episode_id": 1,
+      "language_instruction": "Locate the cup, grasp it with the right hand, and lift it stably.",
+      "episode_stats": {
+        "duration_seconds": 15.0,
+        "timesteps": 1500,
+        "start_timestamp": 0.0,
+        "end_timestamp": 15.0
+      },
+      "data_paths": {
+        "trajectory_jsonl": "sim_episodes/pick_up_cup/1/trajectory.jsonl",
+        "cameras": [
+          {
+            "camera_id": "head_front",
+            "type": "RGBD",
+            "path_template": "sim_episodes/pick_up_cup/1/frame_{index:06d}"
+          }
+        ]
+      },
+      "annotation": {
+        "pixel_level_segmentation": true,
+        "bounding_box": true,
+        "object_tracking": true,
+        "object_6d_poses": true,
+        "tactile_contact_labels": true,
+        "annotation_path": "sim_episodes/pick_up_cup/1/annotations.json"
+      }
+    }
+  ]
+}
+
+      </pre>
+    </div>
+
+    <!-- Teleoperation Data -->
+    <div class="dataset-column">
+      <h3>Teleoperated Robot Data</h3>
+      <ul>
+        <li>Real humanoid robot execution</li>
+        <li>Embodiment-aligned demonstrations</li>
+        <li>Synchronized proprioception and actions</li>
+        <li>Optional tactile and force sensing</li>
+      </ul>
+
+      <p class="caption">
+        Teleoperation data bridges human intent and robot embodiment,
+        enabling high-fidelity action learning.
+      </p>
+
+      <pre class="code-snippet">
+{
+  "skill_id": 1,
+  "skill_name": "pick_up_cup",
+  "skill_description": "Grasp and lift a cup or similar object from a table using one or both hands while maintaining whole-body balance.",
+  "total_episodes": 475,
+  "robot_config": {
+    "robot_uid": "unitree_g1_v2025",
+    "robot_type": "g1 from unitree",
+    "dof_summary": {
+      "arms": 14,
+      "legs": 15,
+      "hands": 14,
+      "total": 43
+    },
+    "core_sensors": [
+      "RGB camera(s)",
+      "proprioception (joint states, IMU, odometry)"
+    ],
+    "optional_sensors": [
+      "depth camera",
+      "LiDAR",
+      "tactile pressure sensors on hands"
+    ],
+    "control_hz": 100,
+    "default_camera_hz": 30,
+    "default_lidar_hz": 10,
+    "default_tactile_hz": 100,
+    "sync_note": "All modalities synchronized via Unix timestamps."
+  },
+  "calibration": {
+    "camera_intrinsics_path": "calibration/camera_intrinsics.json",
+    "sensor_extrinsics_path": "calibration/sensor_to_robot_base_extrinsics.json",
+    "camera_lidar_extrinsics_path": "calibration/camera_to_lidar_extrinsics.json"
+  },
+  "episodes": [
+    {
+      "episode_id": 1,
+      "language_instruction": "Use your right hand to locate and firmly grasp the cup on the table, then lift it while maintaining balance.",
+      "episode_stats": {
+        "duration_seconds": 15.0,
+        "timesteps": 1500,
+        "start_timestamp": 1751489000.123456,
+        "end_timestamp": 1751489015.123456
+      },
+      "data_paths": {
+        "trajectory_jsonl": "episodes/pick_up_cup/1/trajectory.jsonl",
+        "cameras": [
+          {
+            "camera_id": "head_front",
+            "type": "RGB",
+            "path_template": "episodes/pick_up_cup/1/color/frame_{index:06d}.jpg"
+          },
+          {
+            "camera_id": "head_front",
+            "type": "RGBD",
+            "path_template": "episodes/pick_up_cup/1/depth/frame_{index:06d}.npy"
+          }
+        ],
+        "lidar_pcd": "episodes/pick_up_cup/1/lidar/{timestamp}.pcd"
+      },
+      "annotation": "No"
+    }
+  ]
+}
+
+      </pre>
+    </div>
+
+  </div>
+  </div>
+  <p class="footnote">
+    Full dataset schemas and detailed JSON specifications are available in the
+    <a href="https://drive.google.com/file/d/1z3UDhNpSor1R9BGQtfAlzT93O1zwi0rd/view?usp=drive_link">documentation</a>.
+  </p>
+</section>
+
+<!-- Data modalities -->
+  <section>
+  <h2>Data Modalities</h2>
+
+  <p>
+    RobotMotion records multi-modal observations of real-world human behavior.
+    The listed modalities describe the signals provided by the dataset and may
+    be selectively used, downsampled, or adapted depending on the target robot
+    platform and learning method.
+  </p>
+
+  <table class="modality-table">
+    <thead>
+      <tr>
+        <th>Modality</th>
+        <th>Description</th>
+        <th>Temporal Resolution</th>
+        <th>Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>RGB video</td>
+        <td>Egocentric, first-person visual observations</td>
+        <td>10–30 Hz</td>
+        <td>All recordings</td>
+      </tr>
+      <tr>
+        <td>Audio</td>
+        <td>Ambient and task-related audio signals</td>
+        <td>Optional</td>
+        <td>Subset of recordings</td>
+      </tr>
+      <tr>
+        <td>Task metadata</td>
+        <td>Task labels, episode boundaries, and annotations</td>
+        <td>Per episode</td>
+        <td>All recordings</td>
+      </tr>
+      <tr>
+        <td>Temporal segmentation</td>
+        <td>Action and sub-task boundaries</td>
+        <td>Variable</td>
+        <td>Subset of recordings</td>
+      </tr>
+      <tr>
+        <td>Environment context</td>
+        <td>Scene and object-level context information</td>
+        <td>Per episode</td>
+        <td>All recordings</td>
+      </tr>
+      <tr>
+        <td>Robot execution data</td>
+        <td>Robot actions aligned to human demonstrations</td>
+        <td>10–100 Hz</td>
+        <td>When available</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+    <section class="digital-twins">
+  <h2>Digital Twins</h2>
+
+  <p>
+    RobotMotion enables the construction of simulation-aligned digital twins
+    derived from real-world human demonstrations. These digital twins represent
+    task execution as structured, temporally coherent sequences that can be
+    replayed, analyzed, or used for learning in simulated environments.
+  </p>
+
+  <p>
+    Rather than aiming for exact physical replication, RobotMotion focuses on
+    capturing task-relevant structure, object interactions, and temporal context
+    that are transferable from real-world demonstrations to simulation.
+  </p>
+
+  <!-- GIF goes here -->
+  <div class="twin-visual-grid">
+
+  <!-- Left: real-world demonstration -->
+  <div class="twin-item">
+    <video autoplay loop muted playsinline>
+      <source src="assets/videos/digital_twins1.mp4" type="video/mp4">
+    </video>
+    <p class="twin-caption">Real-world machine deployment</p>
+  </div>
+
+  <!-- Right: digital twin / simulation -->
+  <div class="twin-item">
+    <video autoplay loop muted playsinline>
+      <source src="assets/videos/digital_twins3.mp4" type="video/mp4">
+    </video>
+    <p class="twin-caption">Warehouse digital twin & pathfinding</p>
+  </div>
+
+</div>
+
+
+  <p class="note">
+    Digital twins in RobotMotion are designed to capture task-relevant structure
+    rather than exact physical or geometric replication, and may vary in fidelity
+    depending on the task and environment.
+  </p>
+</section>
+
+    <section class="samples">
+  <h2>Samples</h2>
+
+  <p class="samples-desc">
+    The following videos show representative samples from the RobotMotion dataset,
+    illustrating demonstrations across different tasks and small tools manipulation.
+  </p>
+
+  <div class="samples-grid">
+
+    <div class="sample-item">
+      <video autoplay loop muted playsinline>
+        <source src="assets/videos/Small object manipulation.mp4" type="video/mp4">
+      </video>
+      <p class="sample-caption">Wielding small chip</p>
+    </div>
+
+    <div class="sample-item">
+      <video autoplay loop muted playsinline>
+        <source src="assets/videos/Tool manipulation.mp4" type="video/mp4">
+      </video>
+      <p class="sample-caption">Tools manipulation</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Scale & Statistics -->
+    <section>
+  <h2>Scale & Statistics</h2>
+
+  <ul class="dataset-spec">
+    <li>
+      <strong>Total recordings:</strong>
+      Tens of thousands of task episodes (ongoing collection)
+    </li>
+    <li>
+      <strong>Total duration:</strong>
+      150+ hours of egocentric human demonstrations
+    </li>
+    <li>
+      <strong>Number of tasks:</strong>
+      10+ task categories spanning manipulation and daily activities
+    </li>
+    <li>
+      <strong>Number of environments:</strong>
+      1000 Evnironments: homes, labs, schools and factories.
+    </li>
+    <li>
+      <strong>Temporal structure:</strong>
+      Continuous, long-horizon task execution
+    </li>
+  </ul>
+
+  <p>
+    The dataset will continue to expand over time as new tasks
+    and environments are added.
+  </p>
+</section>
+    
+    <!-- Intended Use -->
+<section>
+  <h2>Intended Use</h2>
+  <p>
+    RobotMotion is designed for research in robot learning, imitation learning,
+    and physical AI. It is not intended for surveillance or biometric identification.
+  </p>
+</section>
+
+  <h2>License</h2>
+  <p>
+    This dataset is proprietary to RobotMotion, Inc. and is not publicly licensed.
+No rights are granted for redistribution, sublicensing, or reuse without prior written consent
+
+  </p>
+</section>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Contact: <a href="mailto:chris@robotmotion.ai">Chris@robotmotion.ai</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
+</div>
+  </div>
+</body>
